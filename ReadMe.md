@@ -18,3 +18,8 @@ Setup your machine.
 
 #### Report
 * Report will be found here: ```cypress/reports/html/<index>.html```
+--
+
+### Specs
+1. **[Spec-1](https://github.com/vinaykumarvvs/sample-cypress-framework/blob/main/cypress/e2e/formAuthentication.spec.cy.js):** Heroku - FormAuthentication Cases
+2. **[Spec-2](https://github.com/vinaykumarvvs/sample-cypress-framework/blob/main/cypress/e2e/dragAndDrop.spec.cy.js):** Heroku - Drag And Drop Cases
