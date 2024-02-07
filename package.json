@@ -1,0 +1,22 @@
+{
+  "name": "sample-cypress-framework",
+  "version": "1.0.0",
+  "description": "Sample Cypress Framework",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf cypress/reports cypress/.tmp cypress/parallel-weights.json",
+    "test": "npm run clean && npx cypress run --headed --browser chrome --spec './cypress/e2e/**/*.js' --quiet",
+    "pre-parallel": "npx cypress run --headed --browser chrome --quiet",
+    "cy:parallel": "cypress-parallel -s pre-parallel -t 2 -d './cypress/e2e/**/*.js' -r 'cypress-mochawesome-reporter' -o 'cypressParallel=true,quiet=true'",
+    "generate-report": "npx generate-mochawesome-report",
+    "test-parallel": "npm run clean && npm run cy:parallel || true && npm run generate-report"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.4",
+    "cypress-mochawesome-reporter": "^3.8.1",
+    "cypress-parallel": "^0.14.0",
+    "rimraf": "^5.0.5"
+  }
+}

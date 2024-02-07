@@ -1,0 +1,11 @@
+/cypress/downloads/
+/cypress/screenshots/
+/cypress/videos/
+/cypress/reports/
+/cypress/.tmp/
+/node_modules/
+/runner-results/
+
+/cypress/parallel-weights.json
+multi-reporter-config.json
+
